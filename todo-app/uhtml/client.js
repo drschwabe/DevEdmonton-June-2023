@@ -1,6 +1,5 @@
 const { log } = console
 const { render, html } = require('uhtml') 
-const $j = require('jquery')  
 
 log('hello world') 
 
@@ -18,33 +17,36 @@ const template = () => html`
 
   ${ adding ? 
     html`
-      <div class="flex mt-2">
+      <div class="flex my-2">
         <input class="mr-2" placeholder="new task" />  
-        <button id="save">save</button>
+        <button id="save" @click=${saveTask}>save</button>
       </div>
     `
     : ``
   }
-`
 
-$j('button#add').on( 'click', () => {
+  <button class=${adding ? 'opacity-50' : '' + `mt-4`} 
+    @click=${enterTask}>
+    add task
+  </button>     
+`
+const doRender = () => render(document.getElementById('tasks'), 
+  template)    
+
+const enterTask = () => {
   log('clicked add task') 
   adding = true 
-  render(document.getElementById('tasks'), 
-    template) 
-  $j('button#add').addClass('opacity-50') 
-  $j('input').focus() 
-})
+  doRender() 
+  document.querySelector('input').focus() 
+}
 
-$j(document).on( 'click', 'button#save', ()=> {
-  tasks.push( $j('input').val() ) 
+const saveTask = () => {
+  tasks.push( document.querySelector('input').value ) 
   log(tasks)                    
   adding = false
-  render(document.getElementById('tasks'), 
-    template) 
-  $j('button#add').removeClass('opacity-50') 
-}) 
+  doRender() 
+} 
 
 
-
+doRender() 
 

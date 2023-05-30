@@ -6,7 +6,6 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "jquery": "^3.7.0",
     "node-html": "file://home/derrick/sling/dev/modules/node-html/node-html-1.0.0-beta.57.tgz",
     "uhtml": "^3.1.0"
   }

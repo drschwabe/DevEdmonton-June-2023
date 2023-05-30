@@ -17,9 +17,6 @@ const html = `<html>
 
   <div id="tasks"></div> 
 
-  <button id="add" 
-    class="mt-4">add task</button>
-
   <script src="client.bundle.js"></script>
 
 </body>
