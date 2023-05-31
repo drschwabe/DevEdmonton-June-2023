@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>Super Tangled jQuery Templating Mess</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="tangledMessContainer">
+    <ul id="tangledMessList">
+      <li class="tangledMessItem">Hello</li>
+      <li class="tangledMessItem">World</li>
+    </ul>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      var tangledMessItems = $(".tangledMessItem");
+      var tangledMessList = $("#tangledMessList");
+      var newTangledMessItems = [];
+
+      tangledMessItems.each(function(index, item) {
+        var newItem = $("<li></li>");
+        newItem.text(item.innerText);
+        newItem.css({
+          "font-weight": getRandomFontWeight(),
+          "color": getRandomColor(),
+          "transform": "rotate(" + getRandomRotation() + "deg)"
+        });
+        newTangledMessItems.push(newItem);
+      });
+
+      tangledMessList.empty();
+
+      for (var i = newTangledMessItems.length - 1; i >= 0; i--) {
+        if (Math.random() < 0.5) {
+          tangledMessList.append(newTangledMessItems[i]);
+        } else {
+          tangledMessList.prepend(newTangledMessItems[i]);
+        }
+      }
+    });
+
+    function getRandomFontWeight() {
+      var weights = ["normal", "bold", "bolder", "lighter"];
+      return weights[Math.floor(Math.random() * weights.length)];
+    }
+
+    function getRandomColor() {
+      var colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    function getRandomRotation() {
+      return Math.floor(Math.random() * 361);
+    }
+  </script>
+</body>
+</html>

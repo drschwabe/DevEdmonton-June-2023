@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script src="
+https://cdn.jsdelivr.net/npm/ejs@3.1.9/ejs.min.js
+"></script>
+  </head>
+  <body>
+    <h1>replace me</h1>
+    <script>
+      const data = {
+        message: 'Hello world (from client)'
+      }      
+      let html = ejs.render('<%= data.message %>', { data })
+      document.querySelector('h1').innerText = html 
+    </script>
+  </body>
+</html>
