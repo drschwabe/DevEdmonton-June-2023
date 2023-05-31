@@ -13,14 +13,14 @@ const html = `<html>
   ${no.twLocalScript}
   ${no.twBasicStyle}
 </head>          
-<body class="p-6">
+<body class="p-6 bg-purple-100/50">
 
-  <h1 class="mb-3">todo app: <b>sprae</b></h1> 
+  <h1 class="mb-3">todo app: <b>spræ</b></h1> 
 
   <div id="tasks">
     <ul>
       <li :each="task in tasks" 
-         class="py-2 border-b border-gray-200" > 
+         class="py-2 border-b border-purple-400" > 
         <span :text="task"></span>
       </li>
     </ul>

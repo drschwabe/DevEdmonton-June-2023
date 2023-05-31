@@ -11,7 +11,7 @@ const html = `<html>
   ${no.twLocalScript}
   ${no.twBasicStyle}
 </head>          
-<body class="p-6">
+<body class="p-6 bg-cyan-100/50">
 
   <h1 class="mb-3">todo app: <b>JSX</b></h1> 
 

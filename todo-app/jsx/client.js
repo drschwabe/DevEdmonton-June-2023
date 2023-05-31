@@ -13,7 +13,7 @@ const template = () => (
   <div>
     <ul>
       { tasks.map( task => (
-        <li class="py-2 border-b border-gray-200">
+        <li class="py-2 border-b border-cyan-500">
           {task}
         </li> )
       )}  

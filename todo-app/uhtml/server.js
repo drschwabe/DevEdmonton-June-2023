@@ -13,7 +13,7 @@ const html = `<html>
 </head>          
 <body class="p-6">
 
-  <h1 class="mb-3">todo app: <b>uhtml</b></h1> 
+  <h1 class="mb-3">todo app: <b><i>µ</i>html</b></h1> 
 
   <div id="tasks"></div> 
 
