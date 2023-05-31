@@ -27,7 +27,7 @@ const template = () => (
       ) : null 
     }
 
-    <button class={(adding ? 'opacity-50' : '' ) + `mt-4`}
+    <button class={`${adding ? 'opacity-50' : '' } mt-4`}
       onclick={enterTask}>
       add task
     </button>     
