@@ -10,8 +10,10 @@ https://cdn.jsdelivr.net/npm/ejs@3.1.9/ejs.min.js
       const data = {
         message: 'Hello world (from client)'
       }      
-      let html = ejs.render('<%= data.message %>', { data })
-      document.querySelector('h1').innerText = html 
+      let html = ejs.render(
+        '<p>there is a message here:</p>' + 
+        '<h1><%= data.message %></h1>', { data })
+      document.body.innerHTML = html 
     </script>
   </body>
 </html>
