@@ -1,8 +1,6 @@
 const { log } = console
 const { render, html } = require('uhtml') 
 
-log('hello world') 
-
 const tasks = [] 
 let adding 
 

@@ -6,6 +6,6 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "node-html": "1.0.0-beta.58"
+    "node-html": "1.0.0-beta.59"
   }
 }
