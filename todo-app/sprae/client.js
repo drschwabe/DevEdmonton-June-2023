@@ -1,8 +1,6 @@
 const { log } = console
 import sprae from '/node_modules/sprae/sprae.min.js'  
 
-log('hello world')
-
 let state 
 const tasks = [] 
 const adding = false           

@@ -1,5 +1,4 @@
 //### todo-app server (for sprae) ### 
-const { log } = console
 
 //Express: 
 const no = require('node-html')                 
@@ -44,7 +43,7 @@ const html = `<html>
 </html>`
 
 
-//route: 
+//index route: 
 expressApp.get('/', (req, res) => 
   res.send(html) 
 ) 

@@ -1,7 +1,5 @@
 const { log } = console
 
-log('hello world')
-
 const tasks = [] 
 let adding
 

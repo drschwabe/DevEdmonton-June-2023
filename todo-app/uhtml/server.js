@@ -1,4 +1,4 @@
-const { log } = console
+//### todo-app server (for uhtml) ### 
 
 //Express: 
 const no = require('node-html')                 
@@ -6,6 +6,7 @@ no.server()
 no.static() 
 const { expressApp } = no 
 
+//base template: 
 const html = `<html>
 <head>
   ${no.twLocalScript}
@@ -22,7 +23,7 @@ const html = `<html>
 </body>
 </html>`
 
-
+//index route: 
 expressApp.get('/', (req, res) => {
   res.send(html) 
 }) 

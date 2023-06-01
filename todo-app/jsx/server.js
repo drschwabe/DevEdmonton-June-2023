@@ -1,4 +1,4 @@
-const { log } = console
+//### todo-app server (for JSX) ### 
 
 //Express: 
 const no = require('node-html')                 
@@ -22,7 +22,7 @@ const html = `<html>
 </body>
 </html>`
 
-
+//index route: 
 expressApp.get('/', (req, res) => {
   res.send(html) 
 }) 

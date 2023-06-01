@@ -4,8 +4,6 @@ const { html, render } = require('uhtml/cjs/x.js')
 const { createPragma} = require('jsx2tag') 
 const h = createPragma(html)
 
-log('hello world') 
-
 const tasks = [] 
 let adding 
 
@@ -46,7 +44,6 @@ const enterTask = () => {
 
 const saveTask = () => {
   tasks.push( document.querySelector('input').value ) 
-  log(tasks)                    
   adding = false
   doRender() 
 } 
